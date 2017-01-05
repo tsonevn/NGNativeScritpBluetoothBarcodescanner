@@ -1,0 +1,13 @@
+
+<StackLayout class="p-20">
+    <Label text="nativescript-barcodescanner" class="h1 text-center"></Label>
+    <Button text="Select barcode types" (tap)="selectType()"></Button>
+    <ListPicker  [visibility]="islistItemVisible ? 'visible' : 'collapsed'" #picker [items]="listitems" [(ngModel)]="selectedindex" ></ListPicker>
+    <Button text="Barcode scanner" (tap)="onTap()" class="btn btn-primary btn-active"></Button>
+    <Label text="nativescript-bluetooth" class="h2 text-center" textWrap="true"></Label>
+    <Button text="requestCoarseLocationPermission" (tap)="requestCoarseLocationPermissionTap()"></Button>
+    <Button text="startScanning" (tap)="startScanningTap()"></Button>
+    <Button text="stopScanning" (tap)="stopScanningTap()"></Button>
+    <Button text="connect to first available device" (tap)="connectTap()" [visibility]="isItemVisible ? 'visible' : 'collapsed'"></Button>
+    <Button text="disconnect" (tap)="disconnectTap()" [visibility]="isItemVisible ? 'visible' : 'collapsed'"></Button>  
+</StackLayout>
